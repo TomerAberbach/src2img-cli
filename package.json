@@ -1,0 +1,49 @@
+{
+  "name": "src2img-cli",
+  "version": "1.0.0",
+  "author": "Tomer Aberbach <tomeraberbach@gmail.com> (https://tomeraberba.ch)",
+  "description": "Converts source code to high quality images.",
+  "keywords": [
+    "source",
+    "images",
+    "screenshot",
+    "converter",
+    "beautiful",
+    "cli"
+  ],
+  "homepage": "https://github.com/TomerAberbach/src2img-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomerAberbach/src2img-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TomerAberbach/src2img-cli/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && standard-markdown README.md",
+    "publish:git": "git add . && git push --follow-tags",
+    "publish:patch": "npm test && npm version patch -m \"%s\" && npm publish && npm run publish:git",
+    "publish:minor": "npm test && npm version minor -m \"%s\" && npm publish && npm run publish:git",
+    "publish:major": "npm test && npm version major -m \"%s\" && npm publish && npm run publish:git"
+  },
+  "bin": {
+    "src2img": "index.js"
+  },
+  "dependencies": {
+    "commander": "latest",
+    "filename2prism": "^1.0.0",
+    "fs-extra": "^7.0.0",
+    "inquirer": "latest",
+    "opn": "^5.3.0",
+    "src2img": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "*",
+    "standard-markdown": "*"
+  }
+}
