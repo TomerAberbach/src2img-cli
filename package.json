@@ -36,11 +36,11 @@
   },
   "dependencies": {
     "commander": "latest",
-    "filename2prism": "^1.0.0",
+    "filename2prism": "^1.0.1",
     "fs-extra": "^7.0.0",
     "inquirer": "latest",
     "opn": "^5.3.0",
-    "src2img": "^1.0.1"
+    "src2img": "^1.0.2"
   },
   "devDependencies": {
     "standard": "*",
