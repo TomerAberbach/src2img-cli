@@ -144,10 +144,14 @@ program
       })
     ).then(answers => {
       ['themePath', 'fontFamily', 'background'].forEach(key => {
-        if (key in answers && answers[key] === 'default') {
-          delete answers[key]
+        if (answers[key] === 'default') {
+          answers[key] = undefined
         }
       })
+
+      if (typeof answers.themePath !== 'undefined') {
+        answers.themePath = path.resolve(answers.themePath)
+      }
 
       return Promise.all(filenames.map(filename => fs.readFile(filename)))
         .then(contents =>
