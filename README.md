@@ -12,6 +12,14 @@ Install with [npm](https://www.npmjs.com):
 $ npm i src2img-cli -g
 ```
 
+If you encounter permission errors run the following instead:
+
+```sh
+$ sudo npm i src2img-cli -g --unsafe-perm=true --allow-root
+```
+
+The permission errors are related to [puppeteer](https://www.npmjs.com/package/puppeteer). See this [issue](https://github.com/GoogleChrome/puppeteer/issues/1597).
+
 ## Usage
 
 Display the help information:
@@ -71,7 +79,7 @@ Note that the best way to increase the resolution of the rendered image is to ch
 
 Some rendered code:
 
-[![example](example.png)]
+![example](example.png)
 
 ## Related
 
