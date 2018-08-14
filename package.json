@@ -40,7 +40,7 @@
     "fs-extra": "^7.0.0",
     "inquirer": "latest",
     "opn": "^5.3.0",
-    "src2img": "^1.0.3"
+    "src2img": "^1.0.4"
   },
   "devDependencies": {
     "standard": "*",
