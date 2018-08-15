@@ -70,7 +70,7 @@ Usage: render [options] <filenames...>
 Simple rendering example:
 
 ```sh
-$ src2img myfile.js
+$ src2img render myfile.js
 ```
 
 Follow the prompts as they pop up and feel free to save a preset! You can reuse a saved preset using the `-p` or `--preset` flag as shown above.
