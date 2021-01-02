@@ -1,7 +1,12 @@
 {
+  "type": "module",
   "name": "src2img-cli",
   "version": "1.0.7",
-  "author": "Tomer Aberbach <tomeraberbach@gmail.com> (https://tomeraberba.ch)",
+  "author": {
+    "name": "Tomer Aberbach",
+    "email": "tomeraberbach@gmail.com",
+    "url": "https://tomeraberba.ch"
+  },
   "description": "Converts source code to high quality images.",
   "keywords": [
     "source",
@@ -11,39 +16,67 @@
     "beautiful",
     "cli"
   ],
-  "homepage": "https://github.com/TomerAberbach/src2img-cli",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TomerAberbach/src2img-cli.git"
+  "files": [
+    "index.js"
+  ],
+  "exports": "./index.js",
+  "bin": {
+    "src2img": "./index.js"
   },
+  "homepage": "https://github.com/TomerAberbach/src2img-cli",
+  "repository": "TomerAberbach/src2img-cli",
   "bugs": {
     "url": "https://github.com/TomerAberbach/src2img-cli/issues"
   },
   "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "main": "index.js",
   "scripts": {
-    "test": "standard && standard-markdown README.md",
-    "publish:git": "git add . && git push --follow-tags",
-    "publish:patch": "npm test && npm version patch -m \"%s\" && npm publish && npm run publish:git",
-    "publish:minor": "npm test && npm version minor -m \"%s\" && npm publish && npm run publish:git",
-    "publish:major": "npm test && npm version major -m \"%s\" && npm publish && npm run publish:git"
+    "lint:prettier:base": "prettier --loglevel silent --ignore-path .gitignore",
+    "lint:prettier": "pnpm run lint:prettier:base -- --write .",
+    "lint:eslint:base": "eslint --ext js --ignore-path .gitignore",
+    "lint:eslint": "pnpm run lint:eslint:base -- --fix .",
+    "lint": "run-s lint:*"
   },
-  "bin": {
-    "src2img": "index.js"
+  "prettier": "@tomer/prettier-config",
+  "eslintConfig": {
+    "extends": "@tomer"
+  },
+  "browserslist": [
+    "current node"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "pnpm run lint:prettier:base -- --write",
+      "pnpm run lint:eslint:base -- --fix"
+    ],
+    "!(pnpm-lock).{json,yaml,md}": "pnpm run lint:prettier:base -- --write"
+  },
+  "commitlint": {
+    "extends": "@commitlint/config-conventional"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
-    "commander": "latest",
-    "filename2prism": "^1.0.1",
-    "fs-extra": "^7.0.0",
-    "inquirer": "latest",
-    "opn": "^5.3.0",
-    "src2img": "^1.0.4"
+    "commander": "6.2.1",
+    "filename2prism": "2.0.0",
+    "fs-extra": "9.0.1",
+    "inquirer": "7.3.3",
+    "open": "7.3.0",
+    "src2img": "2.0.0"
   },
   "devDependencies": {
-    "standard": "*",
-    "standard-markdown": "*"
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@tomer/eslint-config": "0.0.14",
+    "@tomer/prettier-config": "0.0.2",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.17.0",
+    "husky": "4.3.6",
+    "lint-staged": "10.5.3",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.2.1"
   }
 }
