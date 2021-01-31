@@ -90,4 +90,4 @@ For bugs and feature requests, [please create an issue](https://github.com/Tomer
 
 ## License
 
-[MIT](https://github.com/TomerAberbach/src2img-cli/blob/master/license) © [Tomer Aberbach](https://github.com/TomerAberbach)
+[MIT](https://github.com/TomerAberbach/src2img-cli/blob/main/license) © [Tomer Aberbach](https://github.com/TomerAberbach)
