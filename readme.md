@@ -1,8 +1,25 @@
-# src2img-cli
+<h1 align="center">
+  src2img-cli
+</h1>
 
-[![NPM version](https://img.shields.io/npm/v/src2img-cli.svg)](https://www.npmjs.com/package/src2img-cli)
+<div align="center">
+  <a href="https://npmjs.org/package/src2img-cli">
+    <img src="https://badgen.now.sh/npm/v/src2img-cli" alt="version" />
+  </a>
+  <a href="https://bundlephobia.com/result?p=src2img-cli">
+    <img src="https://badgen.net/bundlephobia/minzip/src2img-cli" alt="minzip size" />
+  </a>
+</div>
 
-> Converts source code to high quality images.
+<div align="center">
+  Converts source code to high quality images.
+</div>
+
+## Install
+
+```sh
+$ npm i src2img-cli
+```
 
 ## Install
 
@@ -16,7 +33,9 @@ If you encounter permission errors run the following instead:
 $ sudo npm i src2img-cli -g --unsafe-perm=true --allow-root
 ```
 
-The permission errors are related to [puppeteer](https://www.npmjs.com/package/puppeteer). See this [issue](https://github.com/GoogleChrome/puppeteer/issues/1597).
+The permission errors are related to
+[puppeteer](https://www.npmjs.com/package/puppeteer). See this
+[issue](https://github.com/GoogleChrome/puppeteer/issues/1597).
 
 ## Usage
 
@@ -69,9 +88,11 @@ Simple rendering example:
 $ src2img render myfile.js
 ```
 
-Follow the prompts as they pop up and feel free to save a preset! You can reuse a saved preset using the `-p` or `--preset` flag as shown above.
+Follow the prompts as they pop up and feel free to save a preset! You can reuse
+a saved preset using the `-p` or `--preset` flag as shown above.
 
-Note that the best way to increase the resolution of the rendered image is to choose a high font size in the prompts.
+Note that the best way to increase the resolution of the rendered image is to
+choose a high font size in the prompts.
 
 Some rendered code:
 
@@ -86,8 +107,10 @@ Some rendered code:
 
 Stars are always welcome!
 
-For bugs and feature requests, [please create an issue](https://github.com/TomerAberbach/src2img-cli/issues/new).
+For bugs and feature requests,
+[please create an issue](https://github.com/TomerAberbach/src2img-cli/issues/new).
 
 ## License
 
-[MIT](https://github.com/TomerAberbach/src2img-cli/blob/main/license) © [Tomer Aberbach](https://github.com/TomerAberbach)
+[MIT](https://github.com/TomerAberbach/src2img-cli/blob/main/license) ©
+[Tomer Aberbach](https://github.com/TomerAberbach)
