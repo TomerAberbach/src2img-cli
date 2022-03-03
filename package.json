@@ -65,7 +65,7 @@
     "fs-extra": "10.0.0",
     "inquirer": "8.1.1",
     "open": "8.2.1",
-    "src2img": "2.0.0"
+    "src2img": "2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
